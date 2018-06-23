@@ -16,7 +16,7 @@
     "eslint-config-google": "^0.9.1"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint **/*.js",
+    "lint": "./node_modules/.bin/eslint src/*.js",
     "build": "",
     "test": ""
   }
