@@ -1,23 +1,10 @@
-/**
- * @license
- * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
-
-// Import statements in Polymer 3.0 can now use package names.
-// polymer-element.js now exports PolymerElement instead of Element,
-// so no need to change the symbol. 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/polymer/lib/elements/dom-if.js';
 import '@polymer/paper-checkbox/paper-checkbox.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
 
 class StartPolymer3 extends PolymerElement {
-  static get properties () {
+  static get properties() {
     return {
       message: {
         type: String,
@@ -45,7 +32,7 @@ class StartPolymer3 extends PolymerElement {
     this.message = 'Hello World! I\'m a Polymer element :)';
   }
 
-  ready(){
+  ready() {
     // If you override ready, always call super.ready() first.
     super.ready();
     // Output the custom element's HTML tag to the browser console.
@@ -53,20 +40,19 @@ class StartPolymer3 extends PolymerElement {
     console.log(this.tagName);
     this.$.omgpie.focus();
   }
-  
-  togglePie(){
-    if(this.pie && !this.loadComplete) {
+
+  togglePie() {
+    if (this.pie && !this.loadComplete) {
       // See https://developers.google.com/web/updates/2017/11/dynamic-import
-      import('./lazy-element.js').then((LazyElement) => {
-        console.log("LazyElement loaded");
+      import('./lazy-element.js').then(() => {
       }).catch((reason) => {
-        console.log("LazyElement failed to load", reason);
+        console.error('LazyElement failed to load', reason);
       });
       this.loadComplete = true;
     }
   }
 
-  static get template () {
+  static get template() {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`

@@ -9,5 +9,15 @@
     "@polymer/paper-checkbox": "^3.0.0-pre.12",
     "@polymer/polymer": "^3.0.0-pre.12",
     "@webcomponents/webcomponentsjs": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.0",
+    "eslint-config-google": "^0.9.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "build": "",
+    "test": ""
   }
 }
