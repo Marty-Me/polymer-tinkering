@@ -14,8 +14,7 @@
     "babel-eslint": "^8.2.5",
     "eslint": "^5.0.0",
     "eslint-config-google": "^0.9.1",
-    "uglify-es": "^3.3.9",
-    "uglify-js": "^3.4.1"
+    "uglify-es": "^3.3.9"
   },
   "scripts": {
     "lint": "eslint src/*.js",
