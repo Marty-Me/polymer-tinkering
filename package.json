@@ -18,7 +18,7 @@
   },
   "scripts": {
     "lint": "eslint src/*.js",
-    "build": "uglifyjs src/*.js -c -m --source-map -o dist/output.js",
+    "build": "uglifyjs src/*.js -c -m --source-map -o output.js",
     "test": "",
     "start": "polymer serve"
   }
