@@ -6,20 +6,24 @@
   "author": "The Polymer Project Authors",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@polymer/iron-elements": "0.0.3",
     "@polymer/paper-checkbox": "^3.0.0-pre.12",
     "@polymer/polymer": "^3.0.0-pre.12",
     "@webcomponents/webcomponentsjs": "^1.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
+    "chromedriver": "^2.40.0",
     "eslint": "^5.0.0",
     "eslint-config-google": "^0.9.1",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "wct-browser-legacy": "^1.0.1"
   },
   "scripts": {
     "lint": "eslint src/*.js",
     "build": "mkdir -p dist && uglifyjs src/*.js -c -m --source-map -o dist/output.js",
     "test": "",
-    "start": "polymer serve"
+    "start": "polymer serve",
+    "debug": "polymer serve --open --browser google-chrome"
   }
 }
