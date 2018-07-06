@@ -1,6 +1,11 @@
 language: node_js
-
+services:
+- docker
 script:
-  - npm run lint
-  - npm run build
-  - npm test
+- npm run lint
+- npm run build
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: NiQKLKvA0x9Woh15etEm/efzfloS9hR3ZGsbyGs0K5FLACeI4xzsCPJ8aEoblm+9PlIqTYWAg9Zjz8E82UfDRGnqOYmm8UDACc0fBMClnP8bWl7mvkKeI2sUBxKqyHjnhbgMCQAY8RH3DbS/tQmTy7u6DDXG8VAelkitqR7lhudWRhF4XO93z+qT7pTVKS75qJMXix1P5WNf69Y0yqRhIMZUFT+rALseQ8VC/DSG/duvbdxTEzXxcAVNUnBjt78MB+5p6oOqRk3rDBqOltzjsl6UMX3qHDbcESPNQdRoD5XF7HcEnmaVoOUYfBV7iRPXdrcfqEvLeGujm2lZDCNypMIzhp6tw42xvUaEJRU8Q8xSrlQaMcJGIEwjS3ej8bgQ0GlDxEKNDpQSzCpQSC3w/IJmXOuO7MxXNiuliN5r5+33dxbcE2tQ6yFv1izIL8UurEI06uXZaR7uoLBqia4U0PCWKH0Js7ZdYPZIl4nA1kfE3sQLiimB0SmntOvH3//n+IyPqwlTDeMH3ALe6IpHaTyxyqwvg4aB04gFW71YdqEawhmIJjJxz4/ET5528paathbBB0Z2TF3xIUxjbdKoaPRow6oHwgzWBBD/LBhIkqYVEuEpvOXcG1v5T4uucsW5uu8KjJsCjXPNhB7751bufVHGK31I4/vFYkOsIKIvUNQ=
