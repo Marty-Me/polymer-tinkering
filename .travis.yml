@@ -11,6 +11,7 @@ jobs:
       - npm test
   - stage: Deploy Docker Image
     deploy:
+    - provider: script
       script: echo "hello"
       on:
         branch: feature/docker-deployment
