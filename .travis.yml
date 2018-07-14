@@ -12,3 +12,5 @@ jobs:
   - stage: Deploy Docker Image
     deploy:
       script: echo "hello"
+      on:
+        branch: feature/docker-deployment
